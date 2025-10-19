@@ -51,8 +51,8 @@ var
   mp3Name: string;
 procedure InitializeWizard();
 begin
-    ExtractTemporaryFile('TheEminenceInShadow_Season2Theme.mp3');
-    mp3Name := ExpandConstant('{tmp}\TheEminenceInShadow_Season2Theme.mp3');
+    ExtractTemporaryFile('GrayscaleDominator.mp3');
+    mp3Name := ExpandConstant('{tmp}\GrayscaleDominator.mp3');
     BASS_Init(-1, 48000, 0, 0, 0);
     mp3Handle := BASS_StreamCreateFile(FALSE, PAnsiChar(mp3Name), 0, 0, 0, 0, BASS_SAMPLE_LOOP);
     BASS_Start();
@@ -65,11 +65,12 @@ begin
 end;
 
 [Files]
-Source: "TheEminenceInShadow_Season2Theme.mp3"; DestDir: "{tmp}"; Flags: dontcopy ignoreversion deleteafterinstall
+Source: "GrayscaleDominator.mp3"; DestDir: "{tmp}"; Flags: dontcopy ignoreversion deleteafterinstall
 Source: "C:\Include_DLLInnoSetup\bass.dll"; DestDir: {tmp}; Flags: dontcopy ignoreversion deleteafterinstall
 Source: "E:\MOGDumper-Rel\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
+
 
